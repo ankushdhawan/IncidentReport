@@ -45,7 +45,17 @@ class HomeViewModel:HomeViewModelProtocol {
         }
     }
     func searchText(serach: String)  {
-        let list3 = models?.filter{ ($0.machineName.range(of: serach, options: .caseInsensitive) != nil) }
+        // let list3 = models?.filter{ ($0.machineName.range(of: serach, options: .caseInsensitive) != nil) }
+        let list3 = self.models?.filter({ (mode) -> Bool in
+            let idStr = String(mode.incidentId)
+            let dateStr = Constant.convertToString(date: mode.date, dateformat: Constant.dateFormat).lowercased()
+            return mode.machineName.lowercased().range(of: serach.lowercased()) != nil ||
+                idStr.lowercased().range(of: serach.lowercased()) != nil ||
+                dateStr.range(of: serach.lowercased()) != nil ||
+                dateStr.contains(serach.lowercased())
+            // Add the rest as needed.
+        })
+        
         if list3?.count ?? 0 > 0 {
             self.dataSource.models = list3!
         } else {

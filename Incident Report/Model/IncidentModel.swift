@@ -11,4 +11,6 @@ struct IncidentModel {
     var machineName:String
     var description:String
     var location:String
+    var incidentId:Int
+    var date:Date
 }

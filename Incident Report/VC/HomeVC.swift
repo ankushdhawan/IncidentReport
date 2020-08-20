@@ -26,7 +26,7 @@ class HomeVC: UIViewController, Storyboarded {
         self.tableView.rowHeight = UITableView.automaticDimension;
         self.tableView.estimatedRowHeight = 44.0;
         self.tableView.keyboardDismissMode = .onDrag
-
+        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -81,7 +81,6 @@ extension HomeVC:UITableViewDelegate
 extension HomeVC:UISearchBarDelegate
 {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         viewModel?.searchText(serach:searchText)
         tableView.reloadData()
     }

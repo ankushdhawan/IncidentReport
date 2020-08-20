@@ -11,11 +11,11 @@ import XCTest
 
 class AddRecordTests: XCTestCase {
     
-       
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
@@ -25,15 +25,15 @@ class AddRecordTests: XCTestCase {
     }
     func testAddRecordValidation()
     {
-   let context = InMemoryCoreDataStack.sharedInstance.persistentContainer.viewContext
-   let gateway = IncidentGateWay(viewContext:context)
-   let viewModel = AddIncidentViewModel(gateway: gateway, controller:AddIncidentVC(), validation: Validation())
+        let context = InMemoryCoreDataStack.sharedInstance.persistentContainer.viewContext
+        let gateway = IncidentGateWay(viewContext:context)
+        let viewModel = AddIncidentViewModel(gateway: gateway, controller:AddIncidentVC(), validation: Validation())
         
         let message =  viewModel.checkFieldsValidation(machineName: "", location: "ewewewe", descriptionStr: "wewewewwe")
         XCTAssertNotNil(message)
         let message1 =  viewModel.checkFieldsValidation(machineName: "", location: "", descriptionStr: "wewewewwe")
         XCTAssertNotNil(message1)
-
+        
         let message2 =  viewModel.checkFieldsValidation(machineName: "", location: "", descriptionStr: "")
         XCTAssertNotNil(message2)
         let message3 =  viewModel.checkFieldsValidation(machineName: "ssadsdssdsd", location: "sdsdsdsdsdsdsds", descriptionStr: "sdsdsdsdsdsdsdsdsdssd")
@@ -56,19 +56,19 @@ class AddRecordTests: XCTestCase {
         
     }
     
-
     
-
+    
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }

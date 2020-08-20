@@ -13,7 +13,6 @@ import CoreData
 class InMemoryCoreDataStack {
     
     static let sharedInstance = InMemoryCoreDataStack()
-
     
     lazy var persistentContainer: NSPersistentContainer = {
         /*

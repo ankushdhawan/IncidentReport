@@ -12,6 +12,7 @@ struct  Constant
 {
     static let ErrorTitle = "Error"
     static let NoRecordExis = "No record found"
+    static let dateFormat = "MMM dd yyyy HH:mm:ss"
     struct LoginError {
         
         static let ErrorUserName = "Please enter username atleast "
@@ -27,5 +28,11 @@ struct  Constant
         static let LengthUserName =  8
         static let LengthPasswordName = 8
     }
-    
+    /// Convert Date to String
+    static func convertToString(date: Date, dateformat formatType: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = formatType
+        let newDate: String = dateFormatter.string(from: date)
+        return newDate
+    }
 }

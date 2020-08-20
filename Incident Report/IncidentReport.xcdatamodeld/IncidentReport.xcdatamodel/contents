@@ -2,10 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Incident" representedClassName="Incident" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionData" optional="YES" attributeType="String"/>
+        <attribute name="incidentId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="machineName" optional="YES" attributeType="String"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Incident" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Incident" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

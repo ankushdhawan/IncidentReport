@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,10 +11,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="Incident_Report" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k4U-3W-VBV"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZBC-Zr-ffY"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,13 +92,14 @@
                         <constraints>
                             <constraint firstItem="hkB-eY-4cW" firstAttribute="top" secondItem="td3-gt-Vg7" secondAttribute="bottom" constant="27" id="3g8-Rg-rXs"/>
                             <constraint firstItem="td3-gt-Vg7" firstAttribute="top" secondItem="4rF-Zw-poR" secondAttribute="bottom" constant="23" id="5Xv-H3-1fF"/>
-                            <constraint firstItem="4rF-Zw-poR" firstAttribute="top" secondItem="k4U-3W-VBV" secondAttribute="bottom" constant="236" id="DKG-3F-QyZ"/>
-                            <constraint firstAttribute="trailing" secondItem="4rF-Zw-poR" secondAttribute="trailing" constant="42" id="HDr-0T-hGM"/>
-                            <constraint firstItem="hkB-eY-4cW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2.5" id="RHg-P4-EV6"/>
+                            <constraint firstItem="4rF-Zw-poR" firstAttribute="top" secondItem="lW3-QF-UKt" secondAttribute="top" constant="236" id="DKG-3F-QyZ"/>
+                            <constraint firstItem="lW3-QF-UKt" firstAttribute="trailing" secondItem="4rF-Zw-poR" secondAttribute="trailing" constant="42" id="HDr-0T-hGM"/>
+                            <constraint firstItem="hkB-eY-4cW" firstAttribute="centerX" secondItem="lW3-QF-UKt" secondAttribute="centerX" constant="-2.5" id="RHg-P4-EV6"/>
                             <constraint firstItem="td3-gt-Vg7" firstAttribute="leading" secondItem="4rF-Zw-poR" secondAttribute="leading" id="h4I-cN-y2j"/>
                             <constraint firstItem="td3-gt-Vg7" firstAttribute="trailing" secondItem="4rF-Zw-poR" secondAttribute="trailing" id="kSQ-Xk-Lg9"/>
-                            <constraint firstItem="4rF-Zw-poR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="q69-vS-lvY"/>
+                            <constraint firstItem="4rF-Zw-poR" firstAttribute="leading" secondItem="lW3-QF-UKt" secondAttribute="leading" constant="38" id="q69-vS-lvY"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="lW3-QF-UKt"/>
                     </view>
                     <connections>
                         <outlet property="loginTextField" destination="4rF-Zw-poR" id="8q1-xT-De5"/>
@@ -117,17 +115,13 @@
         <scene sceneID="hRL-Ha-DTB">
             <objects>
                 <viewController restorationIdentifier="HomeVC" storyboardIdentifier="HomeVC" id="Or1-Ni-ac9" customClass="HomeVC" customModule="Incident_Report" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AoD-9N-Vao"/>
-                        <viewControllerLayoutGuide type="bottom" id="fF5-PV-kHM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hEX-sB-69F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1U4-Va-NGL">
-                                <rect key="frame" x="0.0" y="111" width="414" height="790"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="111" width="414" height="785"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -178,9 +172,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="descriptionLabel" destination="pig-nh-XAj" id="YJ0-ZO-glX"/>
-                                            <outlet property="locationLabel" destination="Z7T-vR-GIb" id="hl5-OS-H30"/>
-                                            <outlet property="machineNameLabel" destination="ewl-0r-oO0" id="scO-73-CNS"/>
+                                            <outlet property="dateLabel" destination="pig-nh-XAj" id="idF-mI-15i"/>
+                                            <outlet property="idLabel" destination="Z7T-vR-GIb" id="anG-ay-ahz"/>
+                                            <outlet property="machineNameLabel" destination="ewl-0r-oO0" id="C6o-ic-IkF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -201,11 +195,12 @@
                             <constraint firstItem="1U4-Va-NGL" firstAttribute="top" secondItem="cun-dz-yyx" secondAttribute="bottom" id="5Fr-8r-yqj"/>
                             <constraint firstItem="1U4-Va-NGL" firstAttribute="leading" secondItem="cun-dz-yyx" secondAttribute="leading" id="76b-yL-V4a"/>
                             <constraint firstItem="1U4-Va-NGL" firstAttribute="trailing" secondItem="cun-dz-yyx" secondAttribute="trailing" id="Wgo-rv-bTU"/>
-                            <constraint firstItem="1U4-Va-NGL" firstAttribute="trailing" secondItem="hEX-sB-69F" secondAttribute="trailing" id="bjf-wL-46p"/>
-                            <constraint firstAttribute="bottom" secondItem="1U4-Va-NGL" secondAttribute="bottom" constant="-5" id="kEz-vT-a17"/>
-                            <constraint firstItem="1U4-Va-NGL" firstAttribute="leading" secondItem="hEX-sB-69F" secondAttribute="leading" id="lSQ-AR-IKk"/>
-                            <constraint firstItem="cun-dz-yyx" firstAttribute="top" secondItem="AoD-9N-Vao" secondAttribute="bottom" constant="23" id="s8y-tk-g0a"/>
+                            <constraint firstItem="1U4-Va-NGL" firstAttribute="trailing" secondItem="e11-tQ-E22" secondAttribute="trailing" id="bjf-wL-46p"/>
+                            <constraint firstAttribute="bottom" secondItem="1U4-Va-NGL" secondAttribute="bottom" id="kEz-vT-a17"/>
+                            <constraint firstItem="1U4-Va-NGL" firstAttribute="leading" secondItem="e11-tQ-E22" secondAttribute="leading" id="lSQ-AR-IKk"/>
+                            <constraint firstItem="cun-dz-yyx" firstAttribute="top" secondItem="e11-tQ-E22" secondAttribute="top" constant="23" id="s8y-tk-g0a"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="e11-tQ-E22"/>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="cun-dz-yyx" id="9yh-QQ-vGu"/>
@@ -220,10 +215,6 @@
         <scene sceneID="VSu-bk-b6K">
             <objects>
                 <viewController restorationIdentifier="AddIncidentVC" storyboardIdentifier="AddIncidentVC" id="eSJ-d4-z34" customClass="AddIncidentVC" customModule="Incident_Report" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zML-Tg-BpV"/>
-                        <viewControllerLayoutGuide type="bottom" id="hlb-9D-XfA"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="byx-gV-SKX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,17 +318,18 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LVQ-9X-1dd" firstAttribute="top" secondItem="giT-aD-Fbe" secondAttribute="bottom" constant="28" id="1ok-lB-THq"/>
-                            <constraint firstAttribute="trailing" secondItem="HXf-T9-r2E" secondAttribute="trailing" constant="34" id="5hC-Lk-tVn"/>
+                            <constraint firstItem="6eh-PH-qNS" firstAttribute="trailing" secondItem="HXf-T9-r2E" secondAttribute="trailing" constant="34" id="5hC-Lk-tVn"/>
                             <constraint firstItem="daw-XD-iMg" firstAttribute="top" secondItem="HXf-T9-r2E" secondAttribute="bottom" constant="15.5" id="8Is-Dt-ykB"/>
                             <constraint firstItem="daw-XD-iMg" firstAttribute="trailing" secondItem="HXf-T9-r2E" secondAttribute="trailing" id="DF8-sa-1o3"/>
                             <constraint firstItem="giT-aD-Fbe" firstAttribute="trailing" secondItem="daw-XD-iMg" secondAttribute="trailing" id="WbF-zE-1Dz"/>
                             <constraint firstItem="daw-XD-iMg" firstAttribute="leading" secondItem="HXf-T9-r2E" secondAttribute="leading" id="XMF-ch-seW"/>
-                            <constraint firstItem="LVQ-9X-1dd" firstAttribute="centerX" secondItem="byx-gV-SKX" secondAttribute="centerX" id="ZXH-GQ-acN"/>
+                            <constraint firstItem="LVQ-9X-1dd" firstAttribute="centerX" secondItem="6eh-PH-qNS" secondAttribute="centerX" id="ZXH-GQ-acN"/>
                             <constraint firstItem="giT-aD-Fbe" firstAttribute="leading" secondItem="daw-XD-iMg" secondAttribute="leading" id="Zr7-Rr-4t4"/>
-                            <constraint firstItem="HXf-T9-r2E" firstAttribute="top" secondItem="zML-Tg-BpV" secondAttribute="bottom" multiplier="0.45" constant="200" id="aJy-8i-LyM"/>
+                            <constraint firstItem="HXf-T9-r2E" firstAttribute="top" secondItem="6eh-PH-qNS" secondAttribute="top" multiplier="0.45" constant="200" id="aJy-8i-LyM"/>
                             <constraint firstItem="giT-aD-Fbe" firstAttribute="top" secondItem="daw-XD-iMg" secondAttribute="bottom" constant="15.5" id="njP-8C-X1M"/>
-                            <constraint firstItem="HXf-T9-r2E" firstAttribute="leading" secondItem="byx-gV-SKX" secondAttribute="leading" constant="46" id="yPV-JZ-HWT"/>
+                            <constraint firstItem="HXf-T9-r2E" firstAttribute="leading" secondItem="6eh-PH-qNS" secondAttribute="leading" constant="46" id="yPV-JZ-HWT"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6eh-PH-qNS"/>
                     </view>
                     <connections>
                         <outlet property="descriptionTextView" destination="giT-aD-Fbe" id="sVC-1N-Onl"/>

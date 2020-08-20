@@ -13,7 +13,7 @@ protocol AddIncidentViewModelProtocol {
     var validation:Validation {
         get set
     }
-
+    
     func addRecord(machineName:String,location:String,description:String)
     func checkFieldsValidation(machineName:String,location:String,descriptionStr:String)->String?
 }
@@ -23,18 +23,19 @@ class AddIncidentViewModel:AddIncidentViewModelProtocol {
     var vc: AddIncidentProtocol
     var gateways:IncidentGateWayProtocol
     init(gateway:IncidentGateWayProtocol,controller:AddIncidentProtocol,validation:Validation) {
-           gateways = gateway
-         vc = controller
+        gateways = gateway
+        vc = controller
         self.validation = validation
-       }
-   
+    }
+    
     func addRecord(machineName: String, location: String, description: String) {
-        let model = IncidentModel(machineName: machineName, description: description, location: location)
+        let number = Int.random(in: 0..<300)
+        let model = IncidentModel(machineName: machineName, description: description, location: location,incidentId: number, date: Date())
         gateways.add(parameters: model) {[weak self] (model) in
             guard model != nil else {
                 self?.vc.errorOccurInDb()
                 return
-              }
+            }
             self?.vc.recordAddedSuccessfully()
             print(model)
         }

@@ -10,13 +10,16 @@ import Foundation
 import CoreData
 extension Incident
 {
-   var incident: IncidentModel {
-    return IncidentModel(machineName: machineName ?? "", description: descriptionData ?? "", location: location ?? "")
+    var incident: IncidentModel {
+        return IncidentModel(machineName: machineName ?? "", description: descriptionData ?? "", location: location ?? "",incidentId: Int(incidentId), date: timeStamp ?? Date())
     }
     
     func populate(with incidentObj: IncidentModel) {
         machineName = incidentObj.machineName
         descriptionData = incidentObj.description
         location = incidentObj.location
+        incidentId = Int64(incidentObj.incidentId)
+        timeStamp = incidentObj.date
+        
     }
 }
