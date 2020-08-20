@@ -25,7 +25,6 @@ class Incident_ReportUITests: XCTestCase {
     
     func testLoginForUserNameNegativeCase()
     {
-        
         let app = XCUIApplication()
         app.launch()
         let userName = app.textFields["UserName"]

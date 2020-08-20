@@ -11,6 +11,9 @@ import Foundation
 struct  Constant
 {
     static let ErrorTitle = "Error"
+    static let recordAdded = "Record added successfully"
+    static let recordNotAdded = "Error occur in DB"
+
     static let NoRecordExis = "No record found"
     static let dateFormat = "MMM dd yyyy HH:mm:ss"
     struct LoginError {

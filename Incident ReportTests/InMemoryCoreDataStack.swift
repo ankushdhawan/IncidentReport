@@ -60,8 +60,4 @@ class InMemoryCoreDataStack {
             }
         }
     }
-    
-    func fakeEntity<T: NSManagedObject>(withType type: T.Type) -> T {
-        return persistentContainer.viewContext.addEntity(withType: type)!
-    }
 }

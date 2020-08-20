@@ -24,8 +24,93 @@ class AddIncidentUITestCases: XCTestCase {
     
     func testAddincidentUITestCase()
     {
-        
-}
+        HomeUITestCases().testTableView()
+        let app = XCUIApplication()
+        let machine = app.textFields["Faulty machine"]
+        machine.tap()
+        machine.typeText("Ankush")
+        let location = app.textFields["Name of impacted location"]
+        location.tap()
+        location.typeText("Sec22")
+        let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+        textView.tap()
+        textView.typeText("it is testing perpose")
+        app.staticTexts["Submit"].tap()
+        let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
+        XCTAssert(app.alerts.element.staticTexts["Record added successfully"].exists)
+        XCTAssertTrue(alert.exists)
+        alert.tap()
+        sleep(1)
+        XCTAssertEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+    }
+    
+    func testAddincidentUITestCaseForLocationError()
+    {
+        HomeUITestCases().testTableView()
+        let app = XCUIApplication()
+        let machine = app.textFields["Faulty machine"]
+        machine.tap()
+        machine.typeText("Ankush")
+        let location = app.textFields["Name of impacted location"]
+        location.tap()
+        location.typeText("")
+        let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+        textView.tap()
+        textView.typeText("it is testing perpose")
+        app.staticTexts["Submit"].tap()
+        let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
+        XCTAssert(app.alerts.element.staticTexts["Please enter Location "].exists)
+        XCTAssertTrue(alert.exists)
+        alert.tap()
+        sleep(1)
+        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+    }
+    
+    func testAddincidentUITestCaseForMachineError()
+    {
+        HomeUITestCases().testTableView()
+        let app = XCUIApplication()
+        let machine = app.textFields["Faulty machine"]
+        machine.tap()
+        machine.typeText("")
+        let location = app.textFields["Name of impacted location"]
+        location.tap()
+        location.typeText("sec 22")
+        let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+        textView.tap()
+        textView.typeText("it is testing perpose")
+        app.staticTexts["Submit"].tap()
+        let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
+        XCTAssert(app.alerts.element.staticTexts["Please enter machine name "].exists)
+        XCTAssertTrue(alert.exists)
+        alert.tap()
+        sleep(1)
+        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+    }
+
+    
+    func testAddincidentUITestCaseForDescriptionError()
+    {
+        HomeUITestCases().testTableView()
+        let app = XCUIApplication()
+        let machine = app.textFields["Faulty machine"]
+        machine.tap()
+        machine.typeText("Ankush")
+        let location = app.textFields["Name of impacted location"]
+        location.tap()
+        location.typeText("sec 22")
+        let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+        textView.tap()
+        textView.typeText("")
+        app.staticTexts["Submit"].tap()
+        let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
+        XCTAssert(app.alerts.element.staticTexts["Please enter Description "].exists)
+        XCTAssertTrue(alert.exists)
+        alert.tap()
+        sleep(1)
+        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+    }
+
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

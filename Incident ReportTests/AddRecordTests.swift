@@ -45,7 +45,7 @@ class AddRecordTests: XCTestCase {
         let context = InMemoryCoreDataStack.sharedInstance.persistentContainer.viewContext
         let gateway = IncidentGateWay(viewContext:context)
         let viewModel = AddIncidentViewModel(gateway: gateway, controller:AddIncidentVC(), validation: Validation())
-        var model = IncidentModel(machineName: "Testing12", description: "test12", location: "Data12")
+        var model = IncidentModel(machineName: "machine2", description: "asasas", location: "aaddadd", incidentId: 4, date: Date())
         
         let AddRecordCompletionHandlerExpectation = expectation(description: "Add record completion handler expectation")
         viewModel.gateways.add(parameters: model) { (testModel) in

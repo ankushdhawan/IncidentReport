@@ -13,13 +13,15 @@ protocol HomeProtocol {
 
 class HomeVC: UIViewController, Storyboarded {
     
-    var coordinator: MainCoordinator?
-    var viewModel: HomeViewModelProtocol?
-    
+    //Mark:IBOUTLET OBJECTS
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var searchBar:UISearchBar!
     
+    //Mark:OBJECTS
+    var coordinator: MainCoordinator?
+    var viewModel: HomeViewModelProtocol?
     
+    //Mark:Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addPlusButton()
@@ -33,6 +35,9 @@ class HomeVC: UIViewController, Storyboarded {
         tableView.delegate = self
         fetchRecords()
     }
+    
+    //MARKS:PUBLIC METHOD(S)
+    
     func fetchRecords()
     {
         viewModel?.fetchIncidents(completionHandler: {[weak self] in
@@ -46,6 +51,7 @@ class HomeVC: UIViewController, Storyboarded {
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         self.navigationItem.rightBarButtonItems = [add]
     }
+    
     @objc func addTapped()
     {
         coordinator?.addIncidentScreen()

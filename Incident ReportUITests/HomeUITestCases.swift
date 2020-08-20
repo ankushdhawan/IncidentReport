@@ -26,19 +26,14 @@ class HomeUITestCases: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testTableViewAlert()
+    func testTableView()
     {
-        
+        Incident_ReportUITests().testLoginForPasswordPositiveCase()
         let app = XCUIApplication()
-        let emptyListTable = app.tables["Empty list"]
-        emptyListTable.swipeUp()
-        app.navigationBars["Incident_Report.HomeVC"].buttons["Back"].tap()
-        app/*@START_MENU_TOKEN@*/.staticTexts["Submit"]/*[[".buttons[\"Submit\"].staticTexts[\"Submit\"]",".staticTexts[\"Submit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.children(matching: .window).element(boundBy: 0).tap()
-        app.alerts.scrollViews.otherElements.buttons["OK"].tap()
-        emptyListTable.swipeUp()
-        emptyListTable.tap()
-        emptyListTable.tap()
+        XCTAssertTrue((app.tables.count == 1))
+        let addButton = app.navigationBars["Incident_Report.HomeVC"].buttons["Add"]
+        addButton.tap()
+        XCTAssertEqual(app.navigationBars.element.identifier, "Incident_Report.AddIncidentVC")
         
     }
     

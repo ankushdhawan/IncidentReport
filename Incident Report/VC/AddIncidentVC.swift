@@ -17,7 +17,6 @@ class AddIncidentVC: UIViewController,Storyboarded {
     @IBOutlet weak var machineNameTextField:UITextField!
     @IBOutlet weak var locationTextField:UITextField!
     @IBOutlet weak var descriptionTextView:UITextView!
-    
     @IBOutlet weak var submitButton:UIButton!
     
     //Mark:OBJECTS
@@ -60,14 +59,14 @@ class AddIncidentVC: UIViewController,Storyboarded {
 extension AddIncidentVC:AddIncidentProtocol
 {
     func recordAddedSuccessfully() {
-        self.presentAlertWithTitle(title: "", message: "Record Added", options: "OK") {[weak self]_ in
+        self.presentAlertWithTitle(title: "", message: Constant.recordAdded, options: "OK") {[weak self]_ in
             self?.navigationController?.popViewController(animated: true)
             
         }
     }
     
     func errorOccurInDb() {
-        self.presentAlertWithTitle(title: "", message: "Error occur in DB", options: "OK") {[weak self]_ in
+        self.presentAlertWithTitle(title: "", message: Constant.recordNotAdded, options: "OK") {_ in
             
         }
     }
