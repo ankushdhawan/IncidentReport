@@ -36,7 +36,7 @@ class HomeVC: UIViewController, Storyboarded {
     func fetchRecords()
     {
         viewModel?.fetchIncidents(completionHandler: {[weak self] in
-            self?.tableView.dataSource = self?.viewModel?.dataSource as! UITableViewDataSource
+            self?.tableView.dataSource = self?.viewModel?.dataSource as? UITableViewDataSource
             self?.tableView.reloadData()
         })
     }
@@ -66,7 +66,7 @@ class HomeVC: UIViewController, Storyboarded {
 extension HomeVC:HomeProtocol
 {
     func noRecordAdded() {
-        self.presentAlertWithTitle(title: "", message: Constant.NoRecordExis, options: "OK") {[weak self]_ in
+        self.presentAlertWithTitle(title: "", message: Constant.NoRecordExis, options: "OK") {_ in
             
         }
     }

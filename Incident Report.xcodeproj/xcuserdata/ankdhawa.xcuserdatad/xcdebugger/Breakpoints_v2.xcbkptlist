@@ -30,8 +30,8 @@
             filePath = "Incident Report/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "fetchIncidents(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "Incident Report/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "fetchIncidents(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "Incident Report/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "fetchIncidents(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -167,15 +167,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5825D7DE-8669-4830-A97F-E623B6B30FBF"
+            uuid = "FB1C06DE-EC30-44D9-8251-7EABB0739887"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Incident Report/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "searchText(serach:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -183,17 +183,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EEC3745C-F883-4794-AAA7-2F770AAA4C66"
+            uuid = "34CB52B2-D79C-44F2-9F34-2F9D70AFE1A8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Incident Report/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "searchText(serach:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "496D63C2-7799-4105-A476-4CD8B4EC87B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Incident Report/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "searchText(serach:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "496D63C2-7799-4105-A476-4CD8B4EC87B6 - a962f85841ae4ab7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Incident_Report.HomeViewModel.searchText(serach: Swift.String) -&gt; ()"
+                  moduleName = "Incident Report"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankdhawa/Desktop/IncidentGithub/IncidentReport/Incident%20Report/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1333">
+               </Location>
+               <Location
+                  uuid = "496D63C2-7799-4105-A476-4CD8B4EC87B6 - f77c354b1eaa7a1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Incident_Report.IncidentModel) -&gt; () in Incident_Report.HomeViewModel.searchText(serach: Swift.String) -&gt; ()"
+                  moduleName = "Incident Report"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankdhawa/Desktop/IncidentGithub/IncidentReport/Incident%20Report/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "306">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

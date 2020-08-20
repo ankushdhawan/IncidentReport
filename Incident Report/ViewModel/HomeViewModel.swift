@@ -31,6 +31,9 @@ class HomeViewModel:HomeViewModelProtocol {
         self.vc = vc
         self.dataSource = dataSource
     }
+    
+    /// fetchIncidents
+    /// - Parameter completionHandler: Call back
     func fetchIncidents(completionHandler: @escaping () -> Void)
     {
         gateways.fetchIncidents {[weak self] (arrModel) in
@@ -44,18 +47,25 @@ class HomeViewModel:HomeViewModelProtocol {
             completionHandler()
         }
     }
+    
+    /// SearchText
+    /// - Parameter search: String
     func searchText(serach: String)  {
         // let list3 = models?.filter{ ($0.machineName.range(of: serach, options: .caseInsensitive) != nil) }
-        let list3 = self.models?.filter({ (mode) -> Bool in
+        var list3 = self.models?.filter({ (mode) -> Bool in
             let idStr = String(mode.incidentId)
-            let dateStr = Constant.convertToString(date: mode.date, dateformat: Constant.dateFormat).lowercased()
             return mode.machineName.lowercased().range(of: serach.lowercased()) != nil ||
-                idStr.lowercased().range(of: serach.lowercased()) != nil ||
-                dateStr.range(of: serach.lowercased()) != nil ||
-                dateStr.contains(serach.lowercased())
-            // Add the rest as needed.
+                idStr.lowercased().range(of: serach.lowercased()) != nil
         })
-        
+        if list3?.count == 0
+        {
+            models?.forEach({ (model) in
+                let dateStr = Constant.convertToString(date: model.date, dateformat: Constant.dateFormat)
+                if dateStr.lowercased().range(of: serach.lowercased()) != nil {
+                    list3?.append(model)
+                }
+            })
+        }
         if list3?.count ?? 0 > 0 {
             self.dataSource.models = list3!
         } else {
