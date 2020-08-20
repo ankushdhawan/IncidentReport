@@ -74,3 +74,19 @@ extension AddIncidentVC:AddIncidentProtocol
     
     
 }
+
+extension AddIncidentVC:UITextFieldDelegate,UITextViewDelegate
+{
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        self.view.endEditing(true)
+        return true
+    }
+}

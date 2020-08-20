@@ -11,7 +11,7 @@ import Foundation
 struct  Constant
 {
     static let ErrorTitle = "Error"
-    
+    static let NoRecordExis = "No record found"
     struct LoginError {
         
         static let ErrorUserName = "Please enter username atleast "

@@ -40,6 +40,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LkI-sg-MkO"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="td3-gt-Vg7">
                                 <rect key="frame" x="38" y="343" width="334" height="40"/>
@@ -63,6 +66,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wu0-6s-HKT"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkB-eY-4cW">
                                 <rect key="frame" x="129" y="410" width="151" height="40"/>
@@ -122,6 +128,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1U4-Va-NGL">
                                 <rect key="frame" x="0.0" y="111" width="414" height="790"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableCell" rowHeight="162" id="5gj-Oc-7Wd" customClass="HomeTableCell" customModule="Incident_Report" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="162"/>
@@ -154,6 +162,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </searchBar>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="ewl-0r-oO0" firstAttribute="trailing" secondItem="rqG-Tz-B2K" secondAttribute="trailingMargin" id="67r-eP-H2Y"/>
                                                 <constraint firstItem="ewl-0r-oO0" firstAttribute="leading" secondItem="rqG-Tz-B2K" secondAttribute="leadingMargin" id="Djc-yR-EqQ"/>
@@ -167,6 +176,7 @@
                                                 <constraint firstItem="pig-nh-XAj" firstAttribute="top" secondItem="Z7T-vR-GIb" secondAttribute="bottom" constant="10" id="q1g-GP-LH5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="pig-nh-XAj" id="YJ0-ZO-glX"/>
                                             <outlet property="locationLabel" destination="Z7T-vR-GIb" id="hl5-OS-H30"/>
@@ -186,7 +196,7 @@
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1U4-Va-NGL" firstAttribute="top" secondItem="cun-dz-yyx" secondAttribute="bottom" id="5Fr-8r-yqj"/>
                             <constraint firstItem="1U4-Va-NGL" firstAttribute="leading" secondItem="cun-dz-yyx" secondAttribute="leading" id="76b-yL-V4a"/>
@@ -240,6 +250,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="eSJ-d4-z34" id="g7E-Tm-GMp"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of impacted location" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daw-XD-iMg">
                                 <rect key="frame" x="46" y="268" width="334" height="32"/>
@@ -263,6 +276,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="eSJ-d4-z34" id="5Vu-Ij-KMQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVQ-9X-1dd">
                                 <rect key="frame" x="141" y="471.5" width="132" height="33"/>
@@ -303,6 +319,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="eSJ-d4-z34" id="lEi-wr-OE2"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -42,3 +42,12 @@
         
         
     }
+
+    extension LoginVC:UITextFieldDelegate
+    {
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+            self.view.endEditing(true)
+            return true
+        }
+    }

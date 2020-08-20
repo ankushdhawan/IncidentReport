@@ -34,7 +34,7 @@ class HomeViewModel:HomeViewModelProtocol {
     func fetchIncidents(completionHandler: @escaping () -> Void)
     {
         gateways.fetchIncidents {[weak self] (arrModel) in
-            guard arrModel != nil else {
+            guard  arrModel?.count ?? 0 > 0 else {
                 self?.vc.noRecordAdded()
                 return
             }

@@ -40,6 +40,7 @@
 		FD54786D24EE737500985035 /* InMemoryCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54786C24EE737500985035 /* InMemoryCoreDataStack.swift */; };
 		FD54786F24EE785600985035 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54786E24EE785600985035 /* HomeViewModelTests.swift */; };
 		FD54787124EE85CC00985035 /* HomeUITestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54787024EE85CC00985035 /* HomeUITestCases.swift */; };
+		FD54787324EE8FC400985035 /* AddIncidentUITestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54787224EE8FC400985035 /* AddIncidentUITestCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		FD54786C24EE737500985035 /* InMemoryCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCoreDataStack.swift; sourceTree = "<group>"; };
 		FD54786E24EE785600985035 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		FD54787024EE85CC00985035 /* HomeUITestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITestCases.swift; sourceTree = "<group>"; };
+		FD54787224EE8FC400985035 /* AddIncidentUITestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncidentUITestCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				FD54781124ED3E2A00985035 /* Incident_ReportUITests.swift */,
 				FD54787024EE85CC00985035 /* HomeUITestCases.swift */,
+				FD54787224EE8FC400985035 /* AddIncidentUITestCases.swift */,
 				FD54781324ED3E2A00985035 /* Info.plist */,
 			);
 			path = "Incident ReportUITests";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD54787324EE8FC400985035 /* AddIncidentUITestCases.swift in Sources */,
 				FD54787124EE85CC00985035 /* HomeUITestCases.swift in Sources */,
 				FD54781224ED3E2A00985035 /* Incident_ReportUITests.swift in Sources */,
 			);

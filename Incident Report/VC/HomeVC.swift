@@ -25,6 +25,8 @@ class HomeVC: UIViewController, Storyboarded {
         addPlusButton()
         self.tableView.rowHeight = UITableView.automaticDimension;
         self.tableView.estimatedRowHeight = 44.0;
+        self.tableView.keyboardDismissMode = .onDrag
+
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +66,7 @@ class HomeVC: UIViewController, Storyboarded {
 extension HomeVC:HomeProtocol
 {
     func noRecordAdded() {
-        self.presentAlertWithTitle(title: "", message: "No record found", options: "OK") {[weak self]_ in
+        self.presentAlertWithTitle(title: "", message: Constant.NoRecordExis, options: "OK") {[weak self]_ in
             
         }
     }
