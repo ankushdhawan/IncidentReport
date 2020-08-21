@@ -56,7 +56,7 @@ class AddIncidentUITestCases: XCTestCase {
         location.typeText("")
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
-        textView.typeText("it is testing perpose")
+        textView.typeText("it is testing purpose")
         app.staticTexts["Submit"].tap()
         let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
         XCTAssert(app.alerts.element.staticTexts["Please enter Location "].exists)

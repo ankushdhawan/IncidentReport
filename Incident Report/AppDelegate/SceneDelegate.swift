@@ -21,10 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let navController = UINavigationController()
-            
             // send that into our coordinator so that it can display view controllers
             coordinator = MainCoordinator(navigationController: navController)
-            
             // tell the coordinator to take over control
             coordinator?.start()
             let window = UIWindow(windowScene: windowScene)

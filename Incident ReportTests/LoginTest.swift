@@ -30,7 +30,7 @@ class LoginTest: XCTestCase {
         XCTAssertNotNil(message2)
     }
     
-    func testLoginfieldField()
+    func testLoginField()
     {
         let viewModel = LoginViewModel()
         var status = viewModel.checkStringAlphabeticOrNot(data: "ankush")
