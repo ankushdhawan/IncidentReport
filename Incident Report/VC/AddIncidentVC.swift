@@ -20,13 +20,17 @@ class AddIncidentVC: UIViewController,Storyboarded {
     @IBOutlet weak var submitButton:UIButton!
     
     //Mark:OBJECTS
-    var coordinator: MainCoordinator?
+    var coordinator: BackToFirstViewControllerDelegate?
     var viewModel:AddIncidentViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(false, animated: false);
     }
     
     //Mark:IBACTION METHOD(S)
@@ -60,7 +64,7 @@ extension AddIncidentVC:AddIncidentProtocol
 {
     func recordAddedSuccessfully() {
         self.presentAlertWithTitle(title: "", message: Constant.recordAdded, options: "OK") {[weak self]_ in
-            self?.navigationController?.popViewController(animated: true)
+            self?.coordinator?.navigateBackToLastPage()
             
         }
     }

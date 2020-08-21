@@ -41,6 +41,8 @@
 		FD54786F24EE785600985035 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54786E24EE785600985035 /* HomeViewModelTests.swift */; };
 		FD54787124EE85CC00985035 /* HomeUITestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54787024EE85CC00985035 /* HomeUITestCases.swift */; };
 		FD54787324EE8FC400985035 /* AddIncidentUITestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54787224EE8FC400985035 /* AddIncidentUITestCases.swift */; };
+		FD54787524EEFF3100985035 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54787424EEFF3100985035 /* HomeCoordinator.swift */; };
+		FD54787724EEFF4900985035 /* AddIncidentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54787624EEFF4900985035 /* AddIncidentCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		FD54786E24EE785600985035 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		FD54787024EE85CC00985035 /* HomeUITestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITestCases.swift; sourceTree = "<group>"; };
 		FD54787224EE8FC400985035 /* AddIncidentUITestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncidentUITestCases.swift; sourceTree = "<group>"; };
+		FD54787424EEFF3100985035 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		FD54787624EEFF4900985035 /* AddIncidentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncidentCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				FD54784224ED5FB000985035 /* MainCoordinator.swift */,
+				FD54787424EEFF3100985035 /* HomeCoordinator.swift */,
+				FD54787624EEFF4900985035 /* AddIncidentCoordinator.swift */,
 			);
 			path = Coardinator;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				FD54784024ED5ADC00985035 /* ViewControllerExtension.swift in Sources */,
 				FD54785B24ED8CDA00985035 /* IncidentGateWay.swift in Sources */,
 				FD54785224ED801A00985035 /* AddIncidentViewModel.swift in Sources */,
+				FD54787724EEFF4900985035 /* AddIncidentCoordinator.swift in Sources */,
 				FD54784324ED5FB000985035 /* MainCoordinator.swift in Sources */,
 				FD54786024ED8FBA00985035 /* Incidents.swift in Sources */,
 				FD54783824ED4EFC00985035 /* LoginViewModel.swift in Sources */,
@@ -466,6 +473,7 @@
 				FD5477F224ED3E2900985035 /* SceneDelegate.swift in Sources */,
 				FD54785424ED83C600985035 /* CoreDataStack.swift in Sources */,
 				FD54785024ED800600985035 /* HomeViewModel.swift in Sources */,
+				FD54787524EEFF3100985035 /* HomeCoordinator.swift in Sources */,
 				FD54783524ED4A2C00985035 /* TextfieldExtension.swift in Sources */,
 				FD54786324ED9DEC00985035 /* HomeDataSource.swift in Sources */,
 				FD54783E24ED533B00985035 /* Validation.swift in Sources */,
