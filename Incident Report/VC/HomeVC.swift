@@ -24,20 +24,23 @@ class HomeVC: UIViewController, Storyboarded {
     //Mark:Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: true);
+        tableView.delegate = self
+        fetchRecords()
+        
+    }
+    //MARKS:PRIVATE METHOD(S)
+    func setUpUI()
+    {
         self.navigationItem.title = Constant.AppTitle
         addPlusButton()
         self.tableView.rowHeight = UITableView.automaticDimension;
         self.tableView.estimatedRowHeight = 44.0;
         self.tableView.keyboardDismissMode = .onDrag
-        
-        
-        // Do any additional setup after loading the view.
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.setHidesBackButton(true, animated: true);
-        tableView.delegate = self
-        fetchRecords()
-
     }
     
     //MARKS:PUBLIC METHOD(S)

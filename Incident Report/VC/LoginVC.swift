@@ -23,7 +23,7 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             self.navigationItem.title = Constant.AppTitle
-
+            
             // Do any additional setup after loading the view.
         }
         
@@ -54,7 +54,7 @@
         
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             do {
-                let regex = try NSRegularExpression(pattern: ".*[^A-Za-z].*", options: [])
+                let regex = try NSRegularExpression(pattern: Constant.UserNameRegx, options: [])
                 if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
                     return false
                 }

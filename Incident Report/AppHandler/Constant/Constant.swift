@@ -11,6 +11,7 @@ import Foundation
 struct  Constant
 {
     static let ErrorTitle = "Error"
+    static let UserNameRegx = ".*[^A-Za-z].*"
     static let recordAdded = "Record added successfully"
     static let recordNotAdded = "Error occur in DB"
     static let AppTitle = "Incident Report"

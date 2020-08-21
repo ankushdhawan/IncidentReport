@@ -161,7 +161,7 @@
 				FD54785C24ED8E7400985035 /* Model */,
 				FD54784824ED7DC200985035 /* Store */,
 				FD54782E24ED3F5300985035 /* AppHandler */,
-				FD54784124ED5EF300985035 /* Coardinator */,
+				FD54784124ED5EF300985035 /* Coordinator */,
 				FD54783624ED4EDC00985035 /* ViewModel */,
 				FD54782324ED3E9700985035 /* VC */,
 				FD54786124ED9DC300985035 /* DataSource */,
@@ -273,14 +273,14 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		FD54784124ED5EF300985035 /* Coardinator */ = {
+		FD54784124ED5EF300985035 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				FD54784224ED5FB000985035 /* MainCoordinator.swift */,
 				FD54787424EEFF3100985035 /* HomeCoordinator.swift */,
 				FD54787624EEFF4900985035 /* AddIncidentCoordinator.swift */,
 			);
-			path = Coardinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		FD54784824ED7DC200985035 /* Store */ = {
