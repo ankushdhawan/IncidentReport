@@ -35,6 +35,7 @@ class AddIncidentUITestCases: XCTestCase {
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
         textView.typeText("it is testing perpose")
+        textView.typeText("\n")
         let submitStaticText = app.staticTexts["Submit"]
         submitStaticText.tap()
         let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
@@ -42,7 +43,7 @@ class AddIncidentUITestCases: XCTestCase {
         XCTAssertTrue(alert.exists)
         alert.tap()
         sleep(1)
-        XCTAssertEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+        XCTAssertEqual(app.navigationBars.element.identifier, "Incident Report")
     }
     
     func testAddincidentUITestCaseForLocationError()
@@ -58,13 +59,17 @@ class AddIncidentUITestCases: XCTestCase {
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
         textView.typeText("it is testing purpose")
+        textView.typeText("\n")
+
         app.staticTexts["Submit"].tap()
         let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
         XCTAssert(app.alerts.element.staticTexts["Please enter Location "].exists)
         XCTAssertTrue(alert.exists)
         alert.tap()
         sleep(1)
-        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident Report")
+        
+        
     }
     
     func testAddincidentUITestCaseForMachineError()
@@ -80,15 +85,16 @@ class AddIncidentUITestCases: XCTestCase {
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
         textView.typeText("it is testing perpose")
+        textView.typeText("\n")
+
         app.staticTexts["Submit"].tap()
         let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
         XCTAssert(app.alerts.element.staticTexts["Please enter machine name "].exists)
         XCTAssertTrue(alert.exists)
         alert.tap()
         sleep(1)
-        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
-        
-}
+        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident Report")
+    }
 
     
     func testAddincidentUITestCaseForDescriptionError()
@@ -104,13 +110,14 @@ class AddIncidentUITestCases: XCTestCase {
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
         textView.typeText("")
+        textView.typeText("\n")
         app.staticTexts["Submit"].tap()
         let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
         XCTAssert(app.alerts.element.staticTexts["Please enter Description "].exists)
         XCTAssertTrue(alert.exists)
         alert.tap()
         sleep(1)
-        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
+        XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident Report")
     }
 
 
@@ -124,3 +131,4 @@ class AddIncidentUITestCases: XCTestCase {
     }
 
 }
+
