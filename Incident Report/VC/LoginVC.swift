@@ -53,14 +53,9 @@
         }
         
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            do {
-                let regex = try NSRegularExpression(pattern: Constant.UserNameRegx, options: [])
-                if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
-                    return false
-                }
-            }
-            catch {
-                print("ERROR")
+            if textField == loginTextField
+            {
+                return viewModel?.checkStringAlphabeticOrNot(data: string) ?? true
             }
             return true
         }

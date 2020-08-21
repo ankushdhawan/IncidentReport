@@ -30,6 +30,15 @@ class LoginTest: XCTestCase {
         XCTAssertNotNil(message2)
     }
     
+    func testLoginfieldField()
+    {
+        let viewModel = LoginViewModel()
+        var status = viewModel.checkStringAlphabeticOrNot(data: "ankush")
+        XCTAssertTrue(status)
+        status = viewModel.checkStringAlphabeticOrNot(data: "ankush178")
+        XCTAssertFalse(status)
+    }
+    
     func testLoginValidationForPositiveCase()
     {
         let viewModel = LoginViewModel()

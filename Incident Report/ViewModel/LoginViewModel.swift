@@ -10,6 +10,7 @@ import Foundation
 
 protocol LoginViewModelProtocol {
     func checkFieldsValidation(userName:String,password:String)->String?
+    func checkStringAlphabeticOrNot(data:String) -> Bool
 }
 class LoginViewModel:LoginViewModelProtocol {
     var validation = Validation()
@@ -23,4 +24,19 @@ class LoginViewModel:LoginViewModelProtocol {
         }
         return nil
     }
+    
+    func checkStringAlphabeticOrNot(data:String) -> Bool
+    {
+        do {
+            let regex = try NSRegularExpression(pattern: Constant.UserNameRegx, options: [])
+            if regex.firstMatch(in: data, options: [], range: NSMakeRange(0, data.count)) != nil {
+                return false
+            }
+        }
+        catch {
+            print("ERROR")
+        }
+        return true
+    }
+    
 }
