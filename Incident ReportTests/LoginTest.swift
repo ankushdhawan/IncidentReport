@@ -24,7 +24,7 @@ class LoginTest: XCTestCase {
         let viewModel = LoginViewModel()
         let message =  viewModel.checkFieldsValidation(userName: "", password: "123456789")
         XCTAssertNotNil(message)
-        let message1 =  viewModel.checkFieldsValidation(userName: "ankushdhawan", password: "123456789")
+        let message1 =  viewModel.checkFieldsValidation(userName: "anku", password: "123456789")
         XCTAssertNotNil(message1)
         let message2 =  viewModel.checkFieldsValidation(userName: "ankushdhawan", password: "")
         XCTAssertNotNil(message2)

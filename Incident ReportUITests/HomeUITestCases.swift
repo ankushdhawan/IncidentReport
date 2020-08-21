@@ -31,10 +31,9 @@ class HomeUITestCases: XCTestCase {
         Incident_ReportUITests().testLoginForPasswordPositiveCase()
         let app = XCUIApplication()
         XCTAssertTrue((app.tables.count == 1))
-        let addButton = app.navigationBars["Incident_Report.HomeVC"].buttons["Add"]
+        let addButton = app.navigationBars["Incident Report"].buttons["Add"]
         addButton.tap()
         XCTAssertEqual(app.navigationBars.element.identifier, "Incident_Report.AddIncidentVC")
-        
     }
     
     func testExample() throws {

@@ -31,9 +31,7 @@ enum ValidateError
             return Constant.AddMachine.ErrorMachineName
         case .Location:
             return Constant.AddMachine.ErrorLocationName
-        default:
-            break
-        }
+       }
     }
 }
 

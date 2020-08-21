@@ -58,7 +58,6 @@ class Incident_ReportUITests: XCTestCase {
     {
         let app = XCUIApplication()
         app.launch()
-        
         let userName = app.textFields["UserName"]
         userName.tap()
         
@@ -67,8 +66,8 @@ class Incident_ReportUITests: XCTestCase {
         
         let passwordSecureTextField = app.secureTextFields["Password"]
         passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("nnnhhhhh")
-        
+        passwordSecureTextField.typeText("nnnhhhhhnnnnnn")
+                
         app/*@START_MENU_TOKEN@*/.staticTexts["Submit"]/*[[".buttons[\"Submit\"].staticTexts[\"Submit\"]",".staticTexts[\"Submit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCTAssertFalse(app.alerts["Error"].exists)
     }

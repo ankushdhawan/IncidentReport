@@ -28,6 +28,11 @@ class AddIncidentViewModel:AddIncidentViewModelProtocol {
         self.validation = validation
     }
     
+    /// Add Record in the database
+    /// - Parameters:
+    ///   - machineName: String Instance
+    ///   - location: String Instance
+    ///   - description: String Instance
     func addRecord(machineName: String, location: String, description: String) {
         let number = Int.random(in: 0..<300)
         let model = IncidentModel(machineName: machineName, description: description, location: location,incidentId: number, date: Date())
@@ -40,6 +45,14 @@ class AddIncidentViewModel:AddIncidentViewModelProtocol {
             print(model)
         }
     }
+    
+    
+    /// Check Fields Validation
+    /// - Parameters:
+    ///   - machineName: String Instance
+    ///   - location: String Instance
+    ///   - descriptionStr: String Instance
+    /// - Returns: String Instance
     func checkFieldsValidation(machineName: String, location: String, descriptionStr: String) -> String? {
         if let validUser = validation.validateMachineName(name:machineName)
         {

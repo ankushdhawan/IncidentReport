@@ -25,12 +25,12 @@ class AddIncidentVC: UIViewController,Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.setHidesBackButton(false, animated: false);
+
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.setHidesBackButton(false, animated: false);
     }
     
     //Mark:IBACTION METHOD(S)
@@ -60,6 +60,8 @@ class AddIncidentVC: UIViewController,Storyboarded {
      */
     
 }
+
+//MARKS:AddIncidentProtocol Delegate
 extension AddIncidentVC:AddIncidentProtocol
 {
     func recordAddedSuccessfully() {
@@ -78,6 +80,7 @@ extension AddIncidentVC:AddIncidentProtocol
     
 }
 
+//MARKS:UITextFieldDelegate & UITextViewDelegate
 extension AddIncidentVC:UITextFieldDelegate,UITextViewDelegate
 {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

@@ -48,7 +48,7 @@ class HomeViewModel:HomeViewModelProtocol {
         }
     }
     
-    /// SearchText
+    /// SearchText as per machine name, id, date
     /// - Parameter search: String
     func searchText(serach: String)  {
         // let list3 = models?.filter{ ($0.machineName.range(of: serach, options: .caseInsensitive) != nil) }

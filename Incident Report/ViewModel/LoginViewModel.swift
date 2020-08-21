@@ -15,6 +15,11 @@ protocol LoginViewModelProtocol {
 class LoginViewModel:LoginViewModelProtocol {
     var validation = Validation()
     
+    /// Check field validation
+    /// - Parameters:
+    ///   - userName: String Instance
+    ///   - password: String Instance
+    /// - Returns: String
     func checkFieldsValidation(userName: String, password: String)->String? {
         if let validUser = validation.validateUserName(name: userName)
         {
@@ -25,6 +30,9 @@ class LoginViewModel:LoginViewModelProtocol {
         return nil
     }
     
+    /// Check String have any numric value
+    /// - Parameter data: String Instance
+    /// - Returns: Bool Instance
     func checkStringAlphabeticOrNot(data:String) -> Bool
     {
         do {

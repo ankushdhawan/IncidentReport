@@ -35,7 +35,8 @@ class AddIncidentUITestCases: XCTestCase {
         let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
         textView.tap()
         textView.typeText("it is testing perpose")
-        app.staticTexts["Submit"].tap()
+        let submitStaticText = app.staticTexts["Submit"]
+        submitStaticText.tap()
         let alert = app.alerts.scrollViews.otherElements.buttons["OK"]
         XCTAssert(app.alerts.element.staticTexts["Record added successfully"].exists)
         XCTAssertTrue(alert.exists)
@@ -86,7 +87,8 @@ class AddIncidentUITestCases: XCTestCase {
         alert.tap()
         sleep(1)
         XCTAssertNotEqual(app.navigationBars.element.identifier, "Incident_Report.HomeVC")
-    }
+        
+}
 
     
     func testAddincidentUITestCaseForDescriptionError()

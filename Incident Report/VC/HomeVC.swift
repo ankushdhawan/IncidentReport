@@ -76,6 +76,8 @@ class HomeVC: UIViewController, Storyboarded {
      */
     
 }
+
+//MARK: HomeProtocol Delegate
 extension HomeVC:HomeProtocol
 {
     func noRecordAdded() {
@@ -84,6 +86,8 @@ extension HomeVC:HomeProtocol
         }
     }
 }
+
+//MARK: Table Delegate
 extension HomeVC:UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -91,6 +95,8 @@ extension HomeVC:UITableViewDelegate
         
     }
 }
+
+//MARK: SearchBar Delegate
 extension HomeVC:UISearchBarDelegate
 {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
